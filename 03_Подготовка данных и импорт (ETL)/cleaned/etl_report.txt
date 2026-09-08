@@ -1,0 +1,22 @@
+ETL REPORT
+==========
+Partners loaded: 3
+Partners rejected: 0
+Products created: 3
+Deliveries loaded: 4
+Sales rejected: 1
+
+Transformations:
+- leading/trailing spaces removed
+- empty strings converted to NULL/empty CSV fields
+- emails normalized to lowercase
+- phones normalized
+- dates normalized to YYYY-MM-DD
+- duplicate partner_id/inn/email checks performed
+- duplicate sale_id checks performed
+- product dictionary extracted from sales
+- unit_price calculated as total_amount / quantity
+- rows with invalid foreign keys rejected
+
+Rejected sales:
+- sale_id=104: partner_id=4 отсутствует в очищенном справочнике partners
