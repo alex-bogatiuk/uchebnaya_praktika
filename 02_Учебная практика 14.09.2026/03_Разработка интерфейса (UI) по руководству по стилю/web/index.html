@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM: Список партнеров и скидок</title>
+    <link rel="icon" type="image/png" href="../resources/icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand-block">
+                <img src="../resources/logo.png" alt="Логотип компании" class="company-logo" id="companyLogo">
+                <div class="brand-text">
+                    <h1 class="page-title">CRM: Список партнеров и скидок</h1>
+                    <p class="page-subtitle">Компания «Мастер Пол» • Расчет индивидуальных скидок по ТЗ</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="counter-badge" id="partnersCounter">Загрузка данных...</div>
+                <button class="btn btn-refresh" id="refreshBtn" title="Обновить список">⟳ Обновить</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="controls-bar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск партнера по названию или ИНН..." autocomplete="off">
+            </div>
+            <div class="tier-legend">
+                <span class="legend-badge">&lt; 10k: <b>0%</b></span>
+                <span class="legend-badge">10k-50k: <b>5%</b></span>
+                <span class="legend-badge">50k-300k: <b>10%</b></span>
+                <span class="legend-badge">&ge; 300k: <b>15%</b></span>
+            </div>
+        </section>
+
+        <!-- Список карточек партнеров по макету Screenshot_2.png -->
+        <section class="partners-list" id="partnersList">
+            <!-- Карточки генерируются динамически через app.js -->
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>© 2026 Учебная практика • Модуль разработки интерфейса по руководству по стилю</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
